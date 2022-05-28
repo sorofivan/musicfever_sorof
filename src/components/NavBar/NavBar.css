@@ -1,0 +1,32 @@
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+.navbar-nav {
+  margin-left: -25px;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #f8f9fa;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ffbe00;
+}
+
+.dropdown-item:hover {
+  background-color: #ffbf00e0;
+}
+
+.form-control {
+  border-color: #202529;
+}
+
+.form-control:focus {
+  border-color: #ffbe00;
+  box-shadow: 0 0 10px #ffbe00;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  cursor: pointer;
+}

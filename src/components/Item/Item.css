@@ -1,0 +1,8 @@
+.card {
+  border-color: #202529;
+}
+
+.card:hover {
+  border-color: #ffbe00;
+  box-shadow: 0 0 40px #ffbe00;
+}
