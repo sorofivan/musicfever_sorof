@@ -14,12 +14,16 @@ const CartWidget = () => {
   });
 
   return (
-    <div className="d-flex">
-      <Link to="/cart" className="p-2">
-        <AiOutlineShoppingCart size="1.8rem" color="#f8f9fa" />
-      </Link>
-      <p className="text-warning">{cartWidgetCount}</p>
-    </div>
+    <>
+      {items.length > 0 && (
+        <div className="d-flex">
+          <Link to="/cart" className="p-2">
+            <AiOutlineShoppingCart size="1.8rem" color="#f8f9fa" />
+          </Link>
+          <p className="text-warning">{cartWidgetCount}</p>
+        </div>
+      )}
+    </>
   );
 };
 

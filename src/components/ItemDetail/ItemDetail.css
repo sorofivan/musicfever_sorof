@@ -27,7 +27,7 @@ body {
 /* Left Column */
 .left-column img {
   width: 100%;
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   opacity: 0;

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../CartProvider/CartProvider";
 import ItemCount from "../ItemCount/ItemCount";
@@ -6,6 +6,13 @@ import "../ItemDetail/ItemDetail.css";
 
 const ItemDetail = ({ item }) => {
   const { addItem } = useContext(CartContext);
+
+  const [add, setAdd] = useState(false);
+
+  const onAdd = (quantity) => {
+    addItem(item, quantity);
+    setAdd(true);
+  };
 
   return (
     <div className="container">
@@ -33,21 +40,31 @@ const ItemDetail = ({ item }) => {
           <p>
             <b>Stock {item.stock}</b>
           </p>
-          <div>
+          {!add ? (
             <ItemCount
               item={item}
               stock={item.stock}
               initial={1}
-              addItem={addItem}
+              onAdd={onAdd}
             />
-          </div>
-          <Link
-            to="/cart"
-            type="button"
-            className="btn btn-success text-uppercase my-1"
-          >
-            checkout
-          </Link>
+          ) : (
+            <div className="d-inline-flex flex-column">
+              <Link
+                to="/cart"
+                type="button"
+                className="btn btn-success text-uppercase my-2"
+              >
+                checkout
+              </Link>
+              <Link
+                to="/"
+                type="button"
+                className="btn btn-warning text-uppercase mt-2 mb-5"
+              >
+                continue shopping
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>

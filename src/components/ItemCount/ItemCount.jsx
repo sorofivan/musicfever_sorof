@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AiFillMinusCircle } from "react-icons/ai";
 import { AiFillPlusCircle } from "react-icons/ai";
 
-const ItemCount = ({ item, stock, initial, addItem }) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
   const [quantity, setQuantity] = useState(initial);
 
   function subtractQuantity() {
@@ -17,6 +17,10 @@ const ItemCount = ({ item, stock, initial, addItem }) => {
     }
   }
 
+  const addToCart = () => {
+    onAdd(quantity);
+  };
+
   return (
     <div>
       <div className="d-flex mt-4 justify-content-center">
@@ -30,8 +34,8 @@ const ItemCount = ({ item, stock, initial, addItem }) => {
       </div>
       <button
         type="button"
-        className="btn btn-warning text-uppercase my-3"
-        onClick={() => addItem(item, quantity)}
+        className="btn btn-warning text-uppercase my-3 mb-5"
+        onClick={addToCart}
       >
         add to cart
       </button>
