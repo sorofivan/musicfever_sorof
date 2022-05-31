@@ -32,7 +32,7 @@ const CartProvider = ({ children }) => {
   };
 
   const removeItem = (id) => {
-    setItems(items.filter((item) => item.id !== Number(id)));
+    setItems(items.filter((item) => item.id !== id));
   };
 
   const clearItems = () => {
