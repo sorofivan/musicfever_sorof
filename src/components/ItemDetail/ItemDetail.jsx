@@ -54,7 +54,7 @@ const ItemDetail = ({ item }) => {
                 type="button"
                 className="btn btn-success text-uppercase my-2"
               >
-                checkout
+                go to cart
               </Link>
               <Link
                 to="/"

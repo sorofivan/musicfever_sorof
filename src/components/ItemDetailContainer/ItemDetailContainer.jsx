@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import bd from "../service/firebase";
+import db from "../service/firebase";
 import { doc, getDoc } from "firebase/firestore";
 import "../ItemList/ItemList.css";
 
@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
 
   useEffect(() => {
-    const itemReference = doc(bd, "data", id);
+    const itemReference = doc(db, "data", id);
     getDoc(itemReference)
       .then((snapshot) => {
         if (snapshot.exists()) {

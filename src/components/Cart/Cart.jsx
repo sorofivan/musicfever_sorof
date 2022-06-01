@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../CartProvider/CartProvider";
 import { BsTrash } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import CartForm from "../CartForm/CartForm";
 
 const Cart = () => {
   const { items, removeItem, clearItems } = useContext(CartContext);
@@ -49,7 +50,7 @@ const Cart = () => {
         </div>
       )}
       {totalPrice() > 0 && (
-        <div className="text-uppercase my-5">
+        <div className="text-uppercase mt-5">
           <h3>{"total: $" + totalPrice().toFixed(3)}</h3>
         </div>
       )}
@@ -57,24 +58,24 @@ const Cart = () => {
         <div className="my-5">
           <button
             type="button"
-            className="w-25 btn btn-danger text-uppercase mx-3"
+            className="btn btn-danger text-uppercase mx-3 mb-4"
+            style={{width: "200px"}}
             onClick={() => clearItems()}
           >
             clear cart
           </button>
-          <button
-            type="button"
-            className="w-25 btn btn-success text-uppercase mx-3"
-          >
-            done
-          </button>
           <Link
             to="/"
             type="button"
-            className="w-25 btn btn-warning text-uppercase mx-3"
+            className="btn btn-warning text-uppercase mx-3 mb-4"
+            style={{width: "200px"}}
           >
             continue shopping
           </Link>
+          <div>
+            <h4 className="text-uppercase text-center my-4">customer's information</h4>
+            <CartForm items={items} totalPrice={totalPrice()} />
+          </div>
         </div>
       )}
     </div>

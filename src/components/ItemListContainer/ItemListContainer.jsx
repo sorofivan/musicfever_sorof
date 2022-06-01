@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
-import bd from "../service/firebase";
+import db from "../service/firebase";
 import { getDocs, collection } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
 
   const getData = async () => {
-    const itemCollection = collection(bd, "data");
+    const itemCollection = collection(db, "data");
 
     try {
       const itemsData = await getDocs(itemCollection);
