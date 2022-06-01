@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import CartModal from "../CartModal/CartModal";
 import { Modal } from "bootstrap";
-import { addDoc, collection, writeBatch, doc } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import db from "../service/firebase";
 
 const CartForm = ({ items, totalPrice }) => {
@@ -38,7 +38,7 @@ const CartForm = ({ items, totalPrice }) => {
         addDoc(ordersCollection, order)
             .then((docRef) => {
             setOrderID(docRef.id);
-            updateStock();
+            // updateStock();
             const modalOrder = new Modal("#modal");
             modalOrder.show();
             })
@@ -59,17 +59,17 @@ const CartForm = ({ items, totalPrice }) => {
         return Object.keys(formValidity).every(Boolean);
     };
 
-    const updateStock = () => {
-        const batch = writeBatch(db);
-        items.forEach((item) => {
-        const id = item.id;
-        const newStock = item.stock - item.quantity;
-        const docRef = doc(db, "data", id);
-        batch.update(docRef, { stock: newStock });
-        });
+    // const updateStock = () => {
+    //     const batch = writeBatch(db);
+    //     items.forEach((item) => {
+    //     const id = item.id;
+    //     const newStock = item.stock - item.quantity;
+    //     const docRef = doc(db, "data", id);
+    //     batch.update(docRef, { stock: newStock });
+    //     });
 
-        batch.commit();
-    };
+    //     batch.commit();
+    // };
 
     return (
         <div className="d-flex justify-content-center mb-5">
