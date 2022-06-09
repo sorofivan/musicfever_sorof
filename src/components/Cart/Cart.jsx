@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { CartContext } from "../CartProvider/CartProvider";
-import { BsTrash } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import CartForm from "../CartForm/CartForm";
+import empty from "../../empty.png"
+import Card from "../Card/Card";
 
 const Cart = () => {
   const { items, removeItem, clearItems } = useContext(CartContext);
@@ -20,26 +21,22 @@ const Cart = () => {
     <div className="my-5">
       {items.length > 0 ? (
         items.map((item, index) => (
-          <div className="d-flex justify-content-between my-2" key={item.id}>
-            <h5 style={{ marginLeft: 250 }}>#{index + 1}</h5>
-            <h5 className="mx-5">
-              {item.brand} {item.model} | ${item.price} x{item.quantity} | $
-              {(item.quantity * item.price).toFixed(3)}
-            </h5>
-            <BsTrash
-              style={{
-                marginRight: 250,
-                marginTop: 6,
-                color: "#f00",
-                cursor: "pointer",
-              }}
-              onClick={() => removeItem(item.id)}
-            />
+          <div className="d-inline-flex m-3" key={index}>
+            <Card item={item} remove={removeItem}/>
           </div>
         ))
       ) : (
         <div>
-          <h1 style={{ marginTop: 200 }}>Empty Cart</h1>
+          <img
+            src={empty}
+            className="my-2"
+            alt="Empty Cart"
+            width="250"
+            height="230"
+          />
+          <h2 style={{ marginTop: 15 }}>Oops! Your cart is empty!</h2>
+          <h5 style={{ color: "#86939e" }}>Looks like you haven't added</h5>
+          <h5 style={{ color: "#86939e" }}>anything yo your cart yet</h5>
           <Link
             to="/"
             type="button"
