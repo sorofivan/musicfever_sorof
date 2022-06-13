@@ -27,3 +27,23 @@
     color: #ffbe00;
     transform: scale(1.2, 1.2);
 }
+
+@media (max-width: 535px) {
+    .contact-img {
+        position: relative;
+        width: 405px;
+        height: 235px;
+        right: 20px;
+    }
+
+    .social-media-container {
+        position: relative;
+        margin-top: -5px;
+        width: 0px;
+    }
+
+    .icon-style {
+        margin: 30px 18px 15px 18px;
+        height: 3.5rem;
+    }
+}

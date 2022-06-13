@@ -89,6 +89,7 @@ body {
   .container {
     flex-direction: column;
     margin-top: 60px;
+    padding: 15px;
   }
 
   .left-column,
@@ -105,6 +106,11 @@ body {
 }
 
 @media (max-width: 535px) {
+  .container {
+    height: 67rem;
+    padding: 5px;
+  }
+
   .product-name {
     position: relative;
     top: -425px;
@@ -120,18 +126,20 @@ body {
   }
 
   .left-column img {
+    position: relative;
     width: 320px;
-    top: 100px;
+    top: 28%;
+    left: 20px;
   }
 
   .list-container {
     position: relative;
-    top: -70px;
+    top: -75px;
   }
 
   .product-price {
     position: relative;
-    top: -60px;
-    bottom: -10px;
+    top: -65px;
+    bottom: -50px;
   }
 }
