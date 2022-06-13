@@ -1,9 +1,15 @@
-.navbar-brand img:hover {
-  transform: scale(1.05);
+.margin-logo {
+  margin-top: -3px;
+  margin-right: 27px;
+  margin-left: 5px;
 }
 
 .navbar-nav {
   margin-left: -25px;
+}
+
+.nav-link {
+  font-size: 18px;
 }
 
 .navbar-nav .nav-item .nav-link {
@@ -29,4 +35,13 @@
 
 input[type="search"]::-webkit-search-cancel-button {
   cursor: pointer;
+}
+
+.margin-search {
+  margin-right: -20px;
+}
+
+.margin-cart {
+  margin-right: 5px;
+  margin-left: 28px;
 }

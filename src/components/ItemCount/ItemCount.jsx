@@ -29,15 +29,19 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           cursor="pointer"
           onClick={subtractQuantity}
         />
-        <p className="mx-4 my-1 text-dark h3">{quantity}</p>
-        <AiFillPlusCircle size="2rem" cursor="pointer" onClick={addQuantity} />
+        <p className="mx-4 my-1 text-dark h3" style={{fontWeight: "bold"}}>{quantity}</p>
+        <AiFillPlusCircle
+          size="2rem"
+          cursor="pointer"
+          onClick={addQuantity}
+        />
       </div>
       <button
         type="button"
-        className="btn btn-warning text-uppercase my-3 mb-5"
+        className="btn btn-warning text-uppercase my-4 mb-5"
         onClick={addToCart}
       >
-        add to cart
+        Add to cart
       </button>
     </div>
   );

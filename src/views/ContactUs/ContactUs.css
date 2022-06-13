@@ -1,0 +1,29 @@
+.contact-container {
+    margin-top: 45px;
+    margin-bottom: 60px;
+}
+
+.contact-img {
+    width: 455px;
+    height: 275px;
+}
+
+.contact-subtitle {
+    color: #86939e;
+    margin: 0px;
+    font-size: 25px;
+}
+
+.social-media-container {
+    margin-top: -5px;
+}
+
+.icon-style {
+    margin: 30px 40px 15px 40px;
+    color:#202529;
+}
+
+.icon-style:hover {
+    color: #ffbe00;
+    transform: scale(1.2, 1.2);
+}

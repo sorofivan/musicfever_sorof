@@ -1,0 +1,17 @@
+.error-container {
+    margin-top: 10px;
+}
+
+.error-container img {
+    width: 320px;
+    height: 320px;
+}
+
+.error-container h3 {
+    font-weight: bold;
+}
+
+.error-container h5 {
+    color: #86939e;
+    margin-bottom: 30px;
+}

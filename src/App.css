@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 .page-container {
@@ -13,4 +14,80 @@ body {
 
 .content-wrap {
   flex: 1;
+}
+
+.container-style {
+  margin-top: 40px;
+}
+
+.page-titles {
+  font-weight: 900;
+  background-image: linear-gradient(
+    to right,
+    #ffbe00,
+    #ffbe00 50%,
+    #202529 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.page-titles:before {
+  content: "";
+  background: #ffbe00;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.page-titles:hover {
+  background-position: 0;
+}
+
+.page-titles:hover::before {
+  width: 100%;
+}
+
+.shop-subtitle {
+  color: #86939e;
+  margin: 20px;
+  font-size: 25px;
+}
+
+.card {
+  border-color: #202529;
+}
+
+.card:hover {
+  border-color: #ffbe00;
+  box-shadow: 0 0 40px #ffbe00;
+}
+
+.card-body p {
+  font-size: large;
+  font-weight: bold;
+}
+
+.card-title,
+.card-body h6,
+.btn,
+.contact-name,
+label {
+  font-weight: bold;
+}
+
+.footer-container {
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }

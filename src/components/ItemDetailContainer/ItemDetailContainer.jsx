@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ItemDetail from "../ItemDetail/ItemDetail";
-import db from "../service/firebase";
+import ItemDetail from "../../views/ItemDetail/ItemDetail";
+import db from "../../service/firebase";
 import { doc, getDoc } from "firebase/firestore";
-import "../ItemList/ItemList.css";
+import Spinner from "../Spinner/Spinner";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -29,7 +29,7 @@ const ItemDetailContainer = () => {
       {item ? (
         <ItemDetail item={item} />
       ) : (
-        <div className="middle lds-dual-ring"></div>
+        <Spinner />
       )}
     </div>
   );

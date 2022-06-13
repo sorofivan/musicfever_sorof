@@ -1,31 +1,54 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
-import db from "../service/firebase";
-import { getDocs, collection } from "firebase/firestore";
+import db from "../../service/firebase";
+import { getDocs, collection, query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
+  const { category } = useParams();
+  
   const [items, setItems] = useState([]);
 
-  const getData = async () => {
+  useEffect (() => {
     const itemCollection = collection(db, "data");
 
-    try {
-      const itemsData = await getDocs(itemCollection);
-      const dataResponse = itemsData.docs.map(
-        (item) => (item = { id: item.id, ...item.data() })
-      );
-      setItems(dataResponse);
-    } catch (error) {
-      console.log(error);
+    if (!category) {
+      getDocs(itemCollection)
+        .then((snapshot) => {
+          if (!snapshot.empty) {
+            setItems(
+              snapshot.docs.map((doc) => {
+                return {
+                  id: doc.id,
+                  ...doc.data(),
+                };
+              })
+            );
+          }
+        })
+        .catch((e) => {
+          console.log(e);
+        });
+    } else {
+      const q = query(itemCollection, where("category", "==", category));
+      getDocs(q).then((snapshot) => {
+        if (!snapshot.empty) {
+          setItems(
+            snapshot.docs.map((doc) => {
+              return {
+                id: doc.id,
+                ...doc.data(),
+              };
+            })
+          );
+        }
+      });
     }
-  };
-  useEffect(() => {
-    getData();
-  }, []);
+}, [category]);
 
   return (
     <div className="row m-4">
-      <ItemList items={items} />
+      <ItemList items={items} category={category} />
     </div>
   );
 };

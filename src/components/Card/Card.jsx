@@ -1,31 +1,32 @@
-import React from 'react'
+import React from "react";
 import { BsTrash } from "react-icons/bs";
+import "./Card.css";
 
 const Card = ({ item, remove }) => {
     return (
-    <div className="card p-1" style={{width: "18rem"}}>
-        <img src={item.image} className="card-img-top" alt="Product Img" />
-        <div className="card-body">
-            <h5 className="card-title">{item.brand}</h5>
-            <h5 className="card-title">{item.model}</h5>
-            <ul className="list-group list-group-flush">
-                <li className="list-group-item">Price: ${item.price}</li>
-                <li className="list-group-item">Quantity: {item.quantity}</li>
-                <li className="list-group-item">Subtotal: ${(item.quantity * item.price).toFixed(3)}</li>
-            </ul>
-        <BsTrash
-            style={{
-            height: 20,
-            width: 20,
-            marginTop: 6,
-            color: "#f00",
-            cursor: "pointer",
-            }}
-            onClick={() => remove(item.id)}
-        />
+        <div className="card card-w bg-dark p-1">
+            <div className="card-body">
+                <h5 className="card-title card-name text-light">
+                {item.brand} {item.model}
+                </h5>
+                <ul className="list-group list-group-flush">
+                    <li className="list-group-item text-light bg-dark">
+                        Quantity: {item.quantity}
+                    </li>
+                    <li className="list-group-item text-light bg-dark">
+                        Price: ${item.price}
+                    </li>
+                    <li className="list-group-item text-light bg-dark">
+                        Subtotal:{" "}
+                        <span className="subtotal-bold text-success">
+                        ${(item.quantity * item.price).toFixed(3)}
+                        </span>
+                    </li>
+                </ul>
+                <BsTrash className="trash-styles" onClick={() => remove(item.id)} />
+            </div>
         </div>
-    </div>
-    )
-}
+    );
+};
 
-export default Card
+export default Card;

@@ -1,0 +1,7 @@
+.modal {
+    top: 20%;
+}
+
+.modal-header h5, .order-code {
+    font-weight: bold;
+}

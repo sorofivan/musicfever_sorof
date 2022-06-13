@@ -17,6 +17,7 @@ body {
 .left-column {
   width: 65%;
   position: relative;
+  margin: 25px 40px -10px -20px;
 }
 
 .right-column {
@@ -73,23 +74,14 @@ body {
 /* Product Price */
 .product-price span {
   font-size: 28px;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 /* Product Stock */
 .product-price p {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: bold;
   margin-top: 20px;
-  text-transform: uppercase;
-}
-
-/* Added Event */
-.message {
-  margin: 5px;
-  font-size: 16px;
-  font-weight: 400;
-  color: #86939e;
 }
 
 /* Responsive */
@@ -113,8 +105,33 @@ body {
 }
 
 @media (max-width: 535px) {
+  .product-name {
+    position: relative;
+    top: -425px;
+  }
+
+  .product-description span {
+    font-size: 18px;
+    letter-spacing: 8px;
+  }
+  
+  .product-description h1 {
+    font-size: 35px;
+  }
+
   .left-column img {
-    width: 220px;
-    top: -85px;
+    width: 320px;
+    top: 100px;
+  }
+
+  .list-container {
+    position: relative;
+    top: -70px;
+  }
+
+  .product-price {
+    position: relative;
+    top: -60px;
+    bottom: -10px;
   }
 }
