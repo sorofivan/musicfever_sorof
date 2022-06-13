@@ -36,7 +36,17 @@ const NavBar = () => {
                 Shop
               </NavLink>
             </li>
-            <li className="nav-item dropdown mx-2">
+            <li className="nav-item mx-2">
+              <NavLink to="/electric-guitars" className="nav-link">
+                Electric Guitars
+              </NavLink>
+            </li>
+            <li className="nav-item mx-2">
+              <NavLink to="/electric-basses" className="nav-link">
+                Electric Basses
+              </NavLink>
+            </li>
+            {/* <li className="nav-item dropdown mx-2">
               <a
                 className="nav-link dropdown-toggle"
                 id="navbarDropdown"
@@ -58,7 +68,7 @@ const NavBar = () => {
                   </Link>
                 </li>
               </ul>
-            </li>
+            </li> */}
             <li className="nav-item mx-2">
               <NavLink to="/contact-us" className="nav-link">
                 Contact Us
