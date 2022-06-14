@@ -97,10 +97,15 @@ body {
     width: 100%;
   }
 
+  .product-name {
+    position: relative;
+    top: -455px;
+  }
+
   .left-column img {
-    width: 300px;
+    width: 375px;
     right: 0;
-    top: -65px;
+    top: 105px;
     left: initial;
   }
 }

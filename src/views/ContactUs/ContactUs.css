@@ -31,8 +31,8 @@
 @media (max-width: 535px) {
     .contact-img {
         position: relative;
-        width: 405px;
-        height: 235px;
+        width: 400px;
+        height: 230px;
         right: 20px;
     }
 
@@ -43,7 +43,7 @@
     }
 
     .icon-style {
-        margin: 30px 18px 15px 18px;
-        height: 3.5rem;
+        margin: 30px 15px 15px 15px;
+        height: 3rem;
     }
 }

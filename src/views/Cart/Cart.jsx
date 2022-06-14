@@ -33,14 +33,14 @@ const Cart = () => {
         ))
       ) : (
         <div>
-          <img src={empty} className="cart-img my-2" alt="Empty Cart" />
+          <img src={empty} className="cart-img mt-4 mt-2" alt="Empty Cart" />
           <h2 className="empty-title">Oops! Your cart is empty!</h2>
           <h5 className="empty-subtitle">Looks like you haven't added</h5>
           <h5 className="empty-subtitle">anything yo your cart yet.</h5>
           <Link
             to="/"
             type="button"
-            className="btn btn-warning text-uppercase my-4"
+            className="btn btn-warning text-uppercase mt-4"
           >
             Shop now
           </Link>

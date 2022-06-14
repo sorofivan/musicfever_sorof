@@ -4,7 +4,7 @@ import ItemListContainer from "../components/ItemListContainer/ItemListContainer
 import Cart from "../views/Cart/Cart";
 import ContactUs from "../views/ContactUs/ContactUs";
 import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
-import Error404 from "../views/Error/Error";
+import Error from "../views/Error/Error";
 import Shop from "../views/Shop/Shop";
 
 const AppRoutes = () => {
@@ -19,7 +19,7 @@ const AppRoutes = () => {
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/item-detail/:id" element={<ItemDetailContainer />} />
-            <Route path="*" element={<Error404 />} />
+            <Route path="*" element={<Error />} />
           </Route>
         </Routes>
       </BrowserRouter>
