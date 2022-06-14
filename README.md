@@ -47,7 +47,7 @@ Do not forget that previously you will need to install [Node.js](https://nodejs.
 
 ## Content
 
-This project has five branches, each one of them corresponds to different advances of the project, and the master branch containing the finished project.
+This project has four branches, each one of them corresponds to different advances of the project, and the master branch containing the finished project.
 
 ## Demo
 
