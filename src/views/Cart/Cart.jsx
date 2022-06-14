@@ -50,7 +50,7 @@ const Cart = () => {
         <div className="total-container text-uppercase">
           <h3>
             Total:{" "}
-            <span className="text-success">${totalPrice().toFixed(3)}</span>
+            <span className="text-success">${totalPrice().toFixed(2)} USD</span>
           </h3>
         </div>
       )}
@@ -74,7 +74,7 @@ const Cart = () => {
             <h4 className="page-titles text-uppercase text-center my-4">
               Customer's information
             </h4>
-            <CartFormContainer items={items} totalPrice={totalPrice()} />
+            <CartFormContainer items={items} totalPrice={totalPrice().toFixed(2)} />
           </div>
         </div>
       )}

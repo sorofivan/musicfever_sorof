@@ -38,7 +38,7 @@ const ItemDetail = ({ item }) => {
           </div>
         </div>
         <div className="d-block product-price">
-          <span className="text-success">${item.price}</span>
+          <span className="text-success">${item.price} USD</span>
           <p className="text-uppercase">Stock {item.stock}</p>
           {!add ? (
             <ItemCount

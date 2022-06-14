@@ -9,7 +9,7 @@ const Item = ({ item, id }) => {
         <img src={item.image} className="card-img-top" alt="Product Img" />
         <div className="card-body bg-dark">
           <h6 className="text-light">{item.model}</h6>
-          <p className="text-success mt-2">${item.price}</p>
+          <p className="text-success mt-2">${item.price} USD</p>
           <Link
             to={`/item-detail/${id}`}
             type="button"

@@ -13,7 +13,7 @@ const CartFormContainer = ({ items, totalPrice }) => {
         surname: "",
         phone: "",
         },
-        total: totalPrice,
+        total: "$" + totalPrice + " USD",
         items: items,
     });
 

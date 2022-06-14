@@ -14,12 +14,12 @@ const Card = ({ item, remove }) => {
                         Quantity: {item.quantity}
                     </li>
                     <li className="list-group-item text-light bg-dark">
-                        Price: ${item.price}
+                        Price: ${item.price} USD
                     </li>
                     <li className="list-group-item text-light bg-dark">
                         Subtotal:{" "}
                         <span className="subtotal-bold text-success">
-                        ${(item.quantity * item.price).toFixed(3)}
+                        ${(item.quantity * item.price).toFixed(2)} USD
                         </span>
                     </li>
                 </ul>
