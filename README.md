@@ -51,7 +51,7 @@ This project has four branches, each one of them corresponds to different advanc
 
 ## Demo
 
-If you want to see the demo of this project deployed, you can visit it here: [Music Fever - Web Store](https://dulcet-kleicha-7acc0a.netlify.app/).
+If you want to see the demo of this project deployed, you can visit it here: [Music Fever - Web Store](https://musicfever.netlify.app/).
 
 ## Previews
 
