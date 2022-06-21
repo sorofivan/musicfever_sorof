@@ -1,18 +1,8 @@
-import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import { CartContext } from "../../context/CartProvider";
+import React from "react";
 import ItemCount from "../../components/ItemCount/ItemCount";
 import "./ItemDetail.css";
 
 const ItemDetail = ({ item }) => {
-  const { addItem } = useContext(CartContext);
-
-  const [add, setAdd] = useState(false);
-
-  const onAdd = (quantity) => {
-    addItem(item, quantity);
-    setAdd(true);
-  };
 
   return (
     <div className="container">
@@ -40,31 +30,10 @@ const ItemDetail = ({ item }) => {
         <div className="d-block product-price">
           <span className="text-success">${item.price} USD</span>
           <p className="text-uppercase">Stock {item.stock}</p>
-          {!add ? (
             <ItemCount
               item={item}
-              stock={item.stock}
               initial={1}
-              onAdd={onAdd}
             />
-            ) : (
-            <div className="d-inline-flex flex-column">
-              <Link
-                to="/cart"
-                type="button"
-                className="btn btn-success text-uppercase my-2"
-              >
-                Go to cart
-              </Link>
-              <Link
-                to="/"
-                type="button"
-                className="btn btn-warning text-uppercase mt-2"
-              >
-                Continue shopping
-              </Link>
-            </div>
-          )}
         </div>
       </div>
     </div>

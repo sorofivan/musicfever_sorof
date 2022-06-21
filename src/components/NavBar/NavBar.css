@@ -37,17 +37,17 @@ input[type="search"]::-webkit-search-cancel-button {
   cursor: pointer;
 }
 
-.margin-search {
-  margin-right: -20px;
-}
+/* .margin-search {
+  margin-right: -30px;
+} */
 
 .margin-cart {
   margin-right: 5px;
   margin-left: 28px;
 }
 
-@media (max-width: 535px) {
+/* @media (max-width: 535px) {
   .margin-search {
     margin-right: -5px;
   }
-}
+} */

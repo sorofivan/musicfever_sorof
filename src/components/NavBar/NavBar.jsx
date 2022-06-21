@@ -75,7 +75,7 @@ const NavBar = () => {
               </NavLink>
             </li>
           </ul>
-          <div className="margin-search">
+          {/* <div className="margin-search">
             <form className="d-flex mx-0">
               <input
                 className="form-control me-2"
@@ -87,7 +87,7 @@ const NavBar = () => {
                 Search
               </button>
             </form>
-          </div>
+          </div> */}
           <div className="margin-cart d-flex justify-content-center">
             <CartWidget />
           </div>
