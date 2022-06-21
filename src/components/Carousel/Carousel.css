@@ -1,0 +1,38 @@
+.slides {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    width: 93.5%;
+}
+
+.slides > img {
+    scroll-snap-align: start;
+}
+
+.slides img {
+    border-radius: 10px;
+    width: 540px;
+    object-fit: contain;
+}
+
+.slides ::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-m {
+    margin: 50px 45px 50px 45px;
+}
+
+@media (max-width: 535px) {
+    .slides img {
+        width: 290px;
+    }
+
+    .carousel-m {
+        margin: 35px -12px 35px -12px;
+    }
+}

@@ -1,0 +1,18 @@
+.title-text {
+    font-size: 70px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.title-text h1, .title-text h2 {
+    color: #ffbe00;
+    text-shadow: 2px 2px #000, 3px 3px #86939e;
+    font-weight: bold;
+}
+
+@media (max-width: 535px) {
+    .title-text h1, .title-text h2 {
+        font-size: 25px;
+        letter-spacing: 5px;
+    }
+}

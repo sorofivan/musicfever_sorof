@@ -7,22 +7,13 @@ import empty from "../../assets/images/empty.png";
 import "./Cart.css";
 
 const Cart = () => {
-  const { items, removeItem, clearItems } = useContext(CartContext);
-
-  const totalPrice = () => {
-    const totalByItem = items.map((item) => {
-      return item.price * item.quantity;
-    });
-    return totalByItem.reduce((a, b) => {
-      return a + b;
-    }, 0);
-  };
+  const { items, removeItem, clearItems, totalPrice } = useContext(CartContext);
 
   return (
     <div className="my-5">
       {items.length > 0 && (
-        <div className="cart-title">
-          <h1 className="page-titles text-uppercase">Cart</h1>
+        <div className="title-text">
+          <h1 className="my-3">Cart</h1>
         </div>
       )}
       {items.length > 0 ? (

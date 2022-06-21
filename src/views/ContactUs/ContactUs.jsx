@@ -9,15 +9,15 @@ import "./ContactUs.css";
 const ContactUs = () => {
   return (
     <div className="contact-container">
+      <div className="title-text">
+        <h1>Contact Us</h1>
+      </div>
+      <div className="my-4">
+        <img className="contact-img" src={contact} alt="Contact Img" />
+      </div>
       <div>
-        <h1 className="page-titles text-uppercase">Contact Us</h1>
-        <div className="my-4">
-          <img className="contact-img" src={contact} alt="Contact Img" />
-        </div>
-        <div>
-          <p className="contact-subtitle">Have any questions?</p>
-          <p className="contact-subtitle">Swipe down, we'd love to hear from you!</p>
-        </div>
+        <p className="contact-subtitle">Have any questions?</p>
+        <p className="contact-subtitle">Swipe down, we'd love to hear from you!</p>
       </div>
       <div className="d-block mt-5">
         <h3 className="page-titles text-uppercase">Get in touch!</h3>

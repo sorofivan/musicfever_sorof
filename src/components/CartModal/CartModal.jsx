@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartProvider";
 import "./CartModal.css";
 
 const CartModal = ({ id, orderID }) => {
-    const { clearItems } = useContext(CartContext);
+    const { clearItems, totalPrice } = useContext(CartContext);
 
     const closeModal = () => {
         clearItems();
@@ -26,7 +26,7 @@ const CartModal = ({ id, orderID }) => {
                         ></button>
                     </div>
                     <div className="modal-body bg-dark text-light">
-                        <p className="mt-2">Your order has been completed successfully.</p>
+                        <p className="mt-2">Your order for <span className="text-success price-modal">${totalPrice().toFixed(2)} USD</span> has been completed successfully.</p>
                         <p>
                         This is your order code:{" "}
                         <span className="order-code text-success">{orderID}</span>.

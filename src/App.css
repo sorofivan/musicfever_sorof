@@ -82,6 +82,7 @@ body {
 .card-body h6,
 .btn,
 .contact-name,
+.price-modal,
 label {
   font-weight: bold;
 }
@@ -90,4 +91,10 @@ label {
   position: relative;
   bottom: 0;
   width: 100%;
+}
+
+@media (max-width: 535px) {
+    .shop-subtitle {
+      font-size: 20px;
+  }
 }
